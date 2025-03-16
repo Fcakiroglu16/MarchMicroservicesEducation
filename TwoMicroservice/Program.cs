@@ -37,7 +37,7 @@ builder.Services.AddMassTransit(configurator =>
         cfg.Host(builder.Configuration.GetConnectionString("RabbitMQ"), configure => { });
 
         // <microservice.name>-<event-name>
-        cfg.ReceiveEndpoint("b.microservice.order.created.event", endpoint => { endpoint.Consumer<OrderCreatedEventConsumer>(context); });
+        cfg.ReceiveEndpoint("b.microservice.order.created.event", endpoint => { endpoint.ConfigureConsumer<OrderCreatedEventConsumer>(context); });
     });
 });
 
