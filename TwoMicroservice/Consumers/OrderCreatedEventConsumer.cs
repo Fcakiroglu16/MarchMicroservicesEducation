@@ -10,7 +10,9 @@ public class OrderCreatedEventConsumer(IPublishEndpoint publishEndpoint) : ICons
         var version = context.Headers.Get<string>("version");
         var message = context.Message;
         var messageId = context.MessageId;
-
+        //idempotence consumer
+        // if(context.inbox.any(x=>x.messageId==messageId))
+        //tranaction start
         Console.WriteLine("Consume Methodu çalıştı");
 
         //throw new Exception("db error");
@@ -27,7 +29,10 @@ public class OrderCreatedEventConsumer(IPublishEndpoint publishEndpoint) : ICons
         //2. işlem
 
         //publishEndpoint.Publish(new OrderCreatedEvent(message.OrderCode, message.UserId, message.Items));
+
+        //inbox table ( messageId,true)
         return Task.CompletedTask;
-        ;
+        
+        //transaction end
     }
 }
