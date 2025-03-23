@@ -1,5 +1,7 @@
 using AMicroservice.Services;
 using MassTransit;
+using Polly;
+using Polly.Extensions.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,11 +24,32 @@ builder.Services.AddMassTransit(configurator =>
         cfg.Host(builder.Configuration.GetConnectionString("RabbitMQ"), configure => { });
     });
 });
-
+// HttpClient
 
 //Repository => ef core = scoped
 // redis =>  singleton
 //couchbase => singleton
+
+
+var retry = HttpPolicyExtensions.HandleTransientHttpError().WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+
+//circuit breaker ( basic)
+var circuitBreakerPolicy = HttpPolicyExtensions.HandleTransientHttpError().CircuitBreakerAsync(3, TimeSpan.FromSeconds(15));
+
+
+// advanced circuit breaker
+var advancedCircuitBreakerPolicy = HttpPolicyExtensions.HandleTransientHttpError().AdvancedCircuitBreakerAsync(0.3, TimeSpan.FromSeconds(15), 3, TimeSpan.FromSeconds(30));
+
+
+//timeout
+var timeoutPolicy = Policy.TimeoutAsync<HttpResponseMessage>(TimeSpan.FromSeconds(10));
+
+
+//combine policies
+var combinedPolicy = Policy.WrapAsync(retry, circuitBreakerPolicy, timeoutPolicy);
+
+builder.Services.AddHttpClient<StockService>(x => { x.BaseAddress = new Uri("http://localhost:5126"); }).AddPolicyHandler(combinedPolicy);
+
 
 var app = builder.Build();
 

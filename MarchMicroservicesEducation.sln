@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMicroservice", "MarchMicroserviceEducation\AMicroservice.csproj", "{D7B293FE-3062-44A8-828B-66B74926E07A}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusShared", "BusShared\BusShared.csproj", "{B8549086-7474-447D-8EFE-C6A3563DEF72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMicroservice", "CMicroservice\CMicroservice.csproj", "{60213D32-E547-4F18-99F5-1CDCA260BF7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerExample.API", "DockerExample.API\DockerExample.API.csproj", "{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{60213D32-E547-4F18-99F5-1CDCA260BF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60213D32-E547-4F18-99F5-1CDCA260BF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60213D32-E547-4F18-99F5-1CDCA260BF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

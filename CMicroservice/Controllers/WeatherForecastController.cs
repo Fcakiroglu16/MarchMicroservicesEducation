@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using RabbitMQ.Client;
 
 namespace CMicroservice.Controllers;
 
@@ -34,15 +33,15 @@ public class WeatherForecastController : ControllerBase
 
     public async Task Legacy()
     {
-        var connectionString = "";
-        var factory = new ConnectionFactory { Uri = new Uri(connectionString) };
+        //var connectionString = "";
+        //var factory = new ConnectionFactory { Uri = new Uri(connectionString) };
 
-        using var connection = factory.CreateConnection();
-        using var channel = connection.CreateModel();
+        //using var connection = factory.CreateConnection();
+        //using var channel = connection.CreateModel();
 
-        channel.ConfirmSelect();
+        //channel.ConfirmSelect();
 
-        //channel.BasicPublish();
-        channel.WaitForConfirms();
+        ////channel.BasicPublish();
+        //channel.WaitForConfirms();
     }
 }

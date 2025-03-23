@@ -5,8 +5,15 @@ namespace AMicroservice.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class OrdersController(IOrderService orderService) : ControllerBase
+public class OrdersController(IOrderService orderService, StockService stockService) : ControllerBase
 {
+    [HttpGet]
+    public async Task<IActionResult> OrderCheck()
+    {
+        return Ok(await stockService.GetStockCount(2));
+    }
+
+
     [HttpPost]
     public async Task<IActionResult> CreateOrder()
     {
