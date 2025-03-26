@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMicroservice", "CMicroserv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerExample.API", "DockerExample.API\DockerExample.API.csproj", "{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaAMicroservice", "KafkaAMicroservice\KafkaAMicroservice.csproj", "{72D48CA6-9FB2-4BB2-8C41-6CBC5965EE4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KafkaExample", "KafkaExample", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaBMicroservice", "KafkaBMicroservice\KafkaBMicroservice.csproj", "{B16363FF-D351-4CE1-9367-9F442A53A991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +45,21 @@ Global
 		{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77B42639-64AF-4FB6-A003-E00EEC5CEEC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D48CA6-9FB2-4BB2-8C41-6CBC5965EE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D48CA6-9FB2-4BB2-8C41-6CBC5965EE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D48CA6-9FB2-4BB2-8C41-6CBC5965EE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D48CA6-9FB2-4BB2-8C41-6CBC5965EE4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B16363FF-D351-4CE1-9367-9F442A53A991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B16363FF-D351-4CE1-9367-9F442A53A991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B16363FF-D351-4CE1-9367-9F442A53A991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B16363FF-D351-4CE1-9367-9F442A53A991}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{72D48CA6-9FB2-4BB2-8C41-6CBC5965EE4A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{B16363FF-D351-4CE1-9367-9F442A53A991} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {154CE14D-F8F8-432B-AEA8-5E8AE2DDDAC6}
