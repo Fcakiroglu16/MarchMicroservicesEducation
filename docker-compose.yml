@@ -1,0 +1,22 @@
+services:
+  dockerexample.api:
+    image: dockerexampleapi-image
+    build:
+      context: .
+      dockerfile: DockerExample.API/Dockerfile
+  dockerexample2.api:
+    image: dockerexampleapi2-image
+    build:
+      context: .
+      dockerfile: DockerExample2.API/Dockerfile
+  microservice-with-ssl.api:
+    image: microservice-with-ssl-image
+    build:
+      context: .
+      dockerfile: MicroserviecWithSSL/Dockerfile
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+volumes:
+      sql_data:
+        driver: local
+   

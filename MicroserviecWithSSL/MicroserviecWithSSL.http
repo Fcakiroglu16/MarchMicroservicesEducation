@@ -1,0 +1,6 @@
+@MicroserviecWithSSL_HostAddress = http://localhost:5081
+
+GET {{MicroserviecWithSSL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,36 @@
+services:
+  dockerexample.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings:Sqlserver=Server=sqlserver,1433;Database=MarchMicroserviceDb;User=Sa;Password=Password12*;Trusted_Connection=False;TrustServerCertificate=True;Integrated Security=False
+    ports:
+      - "5000:8080"
+  dockerexample2.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - Microservices:ProductBaseAddress=http://dockerexample.api:8080
+    ports:
+      - "5010:8080"
+  microservice-with-ssl.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/march_microservice_certificate.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Password12*
+    ports:
+      - "5020:8081"
+    volumes:
+        - C:\Users\f-cak\Downloads:/https
+  sqlserver:
+     user: root
+     environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password12*
+     ports:
+      - "1433:1433"
+     volumes:
+      - sql_data:/var/opt/mssql/data
+

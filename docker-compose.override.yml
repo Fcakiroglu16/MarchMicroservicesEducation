@@ -1,0 +1,23 @@
+services:
+  dockerexample.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "5000:8080"
+  dockerexample2.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "5010:8080"
+  sqlserver:
+     user: root
+     environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password12*
+     ports:
+      - "1433:1433"
+     volumes:
+      - sql_data:/var/opt/mssql/data
+
