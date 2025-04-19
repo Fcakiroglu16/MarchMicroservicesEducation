@@ -1,0 +1,69 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Primitives;
+using System.Net.Http.Headers;
+using Trloop.Core;
+
+namespace Trloop.Common.Handlers
+{
+    public class AddTokenToRequestHandler(IHttpContextAccessor contextAccessor)
+        : DelegatingHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
+            CancellationToken cancellationToken)
+        {
+            var originalHttpHeader = contextAccessor.HttpContext!.Request.Headers;
+
+
+            if (originalHttpHeader.TryGetValue(RequestConst.HeaderDeviceId, out StringValues deviceId))
+            {
+                if (!request.Headers.Contains(RequestConst.HeaderDeviceId))
+                {
+                    request.Headers.Add(RequestConst.HeaderDeviceId, deviceId.ToString());
+                }
+            }
+
+
+            if (originalHttpHeader.TryGetValue(RequestConst.HeaderSessionId, out StringValues sessionId))
+            {
+                if (!request.Headers.Contains(RequestConst.HeaderSessionId))
+                {
+                    request.Headers.Add(RequestConst.HeaderSessionId, sessionId.ToString());
+                }
+            }
+
+
+            if (originalHttpHeader.TryGetValue("CF-Connecting-IP", out StringValues ipAddress))
+            {
+                if (!request.Headers.Contains("CF-Connecting-IP"))
+                {
+                    request.Headers.Add("CF-Connecting-IP", ipAddress.ToString());
+                }
+            }
+
+            if (originalHttpHeader.TryGetValue("Authorization", out StringValues authorization))
+            {
+                if (!request.Headers.Contains("Authorization"))
+                {
+                    request.Headers.Authorization =
+                        new AuthenticationHeaderValue("Bearer", authorization.ToString().Replace("Bearer ", ""));
+                }
+            }
+
+            
+            if (originalHttpHeader.TryGetValue("Accept-Language", out StringValues acceptLanguage))
+            {
+                if (!request.Headers.Contains("Accept-Language"))
+                {
+                    request.Headers.Add("Accept-Language", string.IsNullOrWhiteSpace(acceptLanguage.ToString()) ? "en" : acceptLanguage.ToString());
+                }
+            }
+            else
+            {
+                request.Headers.Add("Accept-Language", "en");
+            }
+
+
+            return base.SendAsync(request, cancellationToken);
+        }
+    }
+}

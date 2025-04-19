@@ -25,6 +25,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerExample2.API", "Docke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviecWithSSL", "MicroserviecWithSSL\MicroserviecWithSSL.csproj", "{D96B65AB-D619-682C-3C4F-5922FDE3CF7B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		interceptor.txt = interceptor.txt
+		JWTValidation.txt = JWTValidation.txt
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry.API", "..\OpenTelemetry.API\OpenTelemetry.API.csproj", "{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +80,10 @@ Global
 		{D96B65AB-D619-682C-3C4F-5922FDE3CF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D96B65AB-D619-682C-3C4F-5922FDE3CF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D96B65AB-D619-682C-3C4F-5922FDE3CF7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

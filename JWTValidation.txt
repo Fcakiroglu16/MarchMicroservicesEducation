@@ -1,0 +1,7 @@
+JWT Validation(Authentication)
+Signature
+TTL(Time to Live))
+Audience
+Issuer
+
+Authorization
