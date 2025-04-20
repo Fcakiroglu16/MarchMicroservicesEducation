@@ -32,10 +32,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryAPI", "..\OpenTelemetry.API\OpenTelemetryAPI.csproj", "{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry2API", "..\OpenTelemetry2API\OpenTelemetry2API.csproj", "{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GatewayExample", "GatewayExample", "{DE0DF209-435D-43E6-BD8E-F3FE165DADA2}"
 	ProjectSection(SolutionItems) = preProject
 		Gateway\Gateway.csproj = Gateway\Gateway.csproj
@@ -44,6 +40,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayMicroservice1.API", "GatewayMicroservice1.API\GatewayMicroservice1.API.csproj", "{AAB1713F-5C17-4E22-FFE4-342930DE4524}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayMicroservice2API", "GatewayMicroservice2API\GatewayMicroservice2API.csproj", "{80E00BB0-A616-AB50-393E-267094200E6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryAPI", "OpenTelemetry.API\OpenTelemetryAPI.csproj", "{901392E2-C970-A537-254F-ACAD7AA99F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry2API", "OpenTelemetry2API\OpenTelemetry2API.csproj", "{698E9643-F978-7A35-AA0A-1CB282E9D4A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,14 +91,6 @@ Global
 		{D96B65AB-D619-682C-3C4F-5922FDE3CF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D96B65AB-D619-682C-3C4F-5922FDE3CF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D96B65AB-D619-682C-3C4F-5922FDE3CF7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AAB1713F-5C17-4E22-FFE4-342930DE4524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AAB1713F-5C17-4E22-FFE4-342930DE4524}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB1713F-5C17-4E22-FFE4-342930DE4524}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -107,6 +99,14 @@ Global
 		{80E00BB0-A616-AB50-393E-267094200E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80E00BB0-A616-AB50-393E-267094200E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80E00BB0-A616-AB50-393E-267094200E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{901392E2-C970-A537-254F-ACAD7AA99F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{901392E2-C970-A537-254F-ACAD7AA99F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{901392E2-C970-A537-254F-ACAD7AA99F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{901392E2-C970-A537-254F-ACAD7AA99F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698E9643-F978-7A35-AA0A-1CB282E9D4A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698E9643-F978-7A35-AA0A-1CB282E9D4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698E9643-F978-7A35-AA0A-1CB282E9D4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698E9643-F978-7A35-AA0A-1CB282E9D4A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
