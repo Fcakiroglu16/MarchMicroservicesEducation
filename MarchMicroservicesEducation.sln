@@ -32,7 +32,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry.API", "..\OpenTelemetry.API\OpenTelemetry.API.csproj", "{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryAPI", "..\OpenTelemetry.API\OpenTelemetryAPI.csproj", "{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry2API", "..\OpenTelemetry2API\OpenTelemetry2API.csproj", "{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +86,10 @@ Global
 		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D05E4FB-B9CC-468F-A5B2-0E29AB581DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54943CD8-E9C6-4286-8F95-EA7D0BEC9339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
