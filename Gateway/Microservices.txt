@@ -1,0 +1,2 @@
+payment  => https://localhost:7043
+discount => https://localhost:7280
