@@ -18,5 +18,11 @@ namespace GatewayMicroservice1.API.Controllers
             };
             return Ok(payments);
         }
+
+        [HttpPost("create")]
+        public IActionResult CreatePayment()
+        {
+            return Ok("Create Payment");
+        }
     }
 }

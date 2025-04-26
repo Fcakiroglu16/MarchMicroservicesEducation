@@ -33,9 +33,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GatewayExample", "GatewayExample", "{DE0DF209-435D-43E6-BD8E-F3FE165DADA2}"
-	ProjectSection(SolutionItems) = preProject
-		Gateway\Gateway.csproj = Gateway\Gateway.csproj
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayMicroservice1.API", "GatewayMicroservice1.API\GatewayMicroservice1.API.csproj", "{AAB1713F-5C17-4E22-FFE4-342930DE4524}"
 EndProject
@@ -44,6 +41,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryAPI", "OpenTelemetry.API\OpenTelemetryAPI.csproj", "{901392E2-C970-A537-254F-ACAD7AA99F53}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry2API", "OpenTelemetry2API\OpenTelemetry2API.csproj", "{698E9643-F978-7A35-AA0A-1CB282E9D4A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{2CADB68C-FB3B-D474-56C8-AE901F365B9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +106,10 @@ Global
 		{698E9643-F978-7A35-AA0A-1CB282E9D4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{698E9643-F978-7A35-AA0A-1CB282E9D4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{698E9643-F978-7A35-AA0A-1CB282E9D4A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CADB68C-FB3B-D474-56C8-AE901F365B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CADB68C-FB3B-D474-56C8-AE901F365B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CADB68C-FB3B-D474-56C8-AE901F365B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CADB68C-FB3B-D474-56C8-AE901F365B9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +119,7 @@ Global
 		{B16363FF-D351-4CE1-9367-9F442A53A991} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{AAB1713F-5C17-4E22-FFE4-342930DE4524} = {DE0DF209-435D-43E6-BD8E-F3FE165DADA2}
 		{80E00BB0-A616-AB50-393E-267094200E6A} = {DE0DF209-435D-43E6-BD8E-F3FE165DADA2}
+		{2CADB68C-FB3B-D474-56C8-AE901F365B9C} = {DE0DF209-435D-43E6-BD8E-F3FE165DADA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {154CE14D-F8F8-432B-AEA8-5E8AE2DDDAC6}
